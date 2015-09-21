@@ -1,0 +1,22 @@
+ program to play a celebrity name game that generates a name-chain from the first and last names of people.
+For example, a combination of two famous singers, Elton John and John Lennon will get you:
+    Elton John + John Lennon = Elton John Lennon
+
+Your program should find the longest name chain for a given input file. By longest chain, we mean chain with highest word count. For example, for input - Elton John John Lennon James Elton Lebron James James Faulkner Your program should return: Lebron James Elton John Lennon
+
+Please submit your program and instructions on how to compile and run your program. Your input file may contain duplicates.
+Please also submit your input file and the output of your program for that input. Wikipedia or IMDB are good data sources for celebrity names but you are free to use any method to construct your input file. If you construct your input file programmatically, please submit the code to construct the input file instead of actual input file itself.
+
+
+Please write your solution as production quality code to demonstrate proper software engineering practice i.e.
+
+(i) Adequately comment your code so others can quickly understand what you are trying to do.
+
+(ii) How efficient is your solution? Provide Big-O analysis of your solution.
+
+(iii) Submit unit tests for your code. Do your tests cover most code execution paths? Did your unit tests find any bugs?
+
+(iv) Submit functional test code for your solution. Did you find any bugs in your code with your functional testing?
+
+We will judge your coding skills and coding practice based on what you submit.
+

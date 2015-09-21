@@ -1,0 +1,34 @@
+1 Running environment
+Java 1.8
+
+2 Time complexity analysis
+Short answer for this question: 
+when no cycle in graph, O(V + E); 
+when exists cycle, the worst case is (V) * ((Maximum E across all nodes) ^ (V)).
+
+Firstly, we read all the names in the file and construct a corresponding graph, this is O(n) time complexity. Then the topological sort costs O(V + E). 
+
+If there is no cycle in the graph, the DP algorithem costs O(V + E);there exists cycle in the graph, this problem actually turns to be a NP-hardness problem. My solution is using brute force algorithm through applying DFS, the time complexity in worst case is 
+(the total number of nodes in graph) * ((Maximum E for all V) ^ (the total number of nodes in graph)). 
+
+Since the graph converted from name list is very sparse(E will not be too large), also in the real case, the length for the longest name chain will never be too big(limits the exponent, which will be much less than the the total number of nodes). So the algorithm will get a result in a reasonable compute time.
+
+As a proof, I downloaded all the celebrity names(about 5000 names) from IDMB and construct a really big graph, but it only costs me about 100ms to figure it out(CPU: 2.00GHz * 4; width: 64 bits; memory: 8GiB).
+
+3 Unit test
+LongestNameChainTest.java
+
+4 functional test
+LongestNameChainFunctionalTest.java
+
+5 Instructions for testing code
+4.1
+make clean
+4.2
+make
+4.3
+#Run junit test
+java -cp  ./lib/hamcrest-core-1.3.jar:./lib/junit.jar:./lib/mockito-all-1.9.5.jar:. org.junit.runner.JUnitCore LongestNameChainTest
+4.4
+#Run functional test
+java LongestNameChainFunctionalTest
